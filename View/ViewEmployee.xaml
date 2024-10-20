@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module05Exercise01.View.ViewEmployee"
+             Shell.NavBarIsVisible="False"
+             Background="MintCream">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,50"
+            Spacing="25">
+            
+            <Label 
+                Text="Contacts"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Medium"
+                FontFamily="ManropeSemibold"/>
+            
+            <ListView ItemsSource="{Binding EmployeeList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10, 20"
+                                  RowSpacing="2"
+                                  ColumnSpacing="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.RowSpan="3"
+                                       Margin="5,5,18,10"
+                                       Source="https://cdn-icons-png.flaticon.com/128/847/847969.png"
+                                       Aspect="AspectFit"
+                                       HeightRequest="50"
+                                       WidthRequest="50" />
+
+                                <Label Grid.Column="1"
+                                       Text="{Binding Name}"
+                                       FontSize="16"
+                                       FontFamily="ManropeSemibold"/>
+
+                                <Label Grid.Row="1"
+                                       Grid.Column="1"
+                                       Text="{Binding Address}"
+                                       FontSize="Caption"
+                                       TextColor="Gray"/>
+
+                                <Label Grid.Row="2"
+                                       Grid.Column="1"
+                                       Text="{Binding email}"
+                                       FontSize="Caption"
+                                       TextColor="Gray"/>
+
+                                <Label Grid.Row="3"
+                                       Grid.Column="1"
+                                       Text="{Binding ContactNo}"
+                                       FontSize="Caption"
+                                       TextColor="Gray"
+                                       VerticalOptions="End"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Load Data" 
+                    Command="{Binding LoadDataCommand}"
+                    BackgroundColor="#1d89e4"/>
+
+            <Label x:Name="ConnectionStatusLabel"
+                   Text="{Binding StatusMessage}"
+                   FontSize="13"
+                   HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
