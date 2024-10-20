@@ -1,33 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Module05Exercise01.MainPage">
+             x:Class="Module05Exercise01.MainPage"
+             Shell.NavBarIsVisible="False"
+             Background="MintCream">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
+            Padding="30,200"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
-
+                Source="https://cdn-icons-png.flaticon.com/128/9386/9386825.png"
+                HeightRequest="150"
+                Aspect="AspectFit"/>
+            
             <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                Text="Contact Management App"
+                FontSize="Medium"
+                FontFamily="ManropeSemibold"
+                Margin="0,-10,0,10"
+                HorizontalTextAlignment="Center"/>
 
             <Button
-                Text="View Personal" 
-                Clicked="OpenViewPersonal"/>
+                Text="Add Contact"
+                BackgroundColor="#1d89e4"
+                WidthRequest="250"/>
 
+            <Button
+                Text="View Contacts" 
+                Clicked="OpenViewPersonal"
+                BackgroundColor="#1d89e4"
+                WidthRequest="250"/>
+
+
+            <Button
+                Text="Manage Contacts"
+                BackgroundColor="#1d89e4"
+                WidthRequest="250"/>
+
+            <!--
             <Label x:Name="ConnectionStatusLabel"
                    Text=""
                    FontSize="18"
@@ -36,6 +47,7 @@
             <Button Text="Test Connection"
                     Clicked="OnTestConnectionClicked"
                     HorizontalOptions="Fill"/>
+            -->
         </VerticalStackLayout>
     </ScrollView>
 
