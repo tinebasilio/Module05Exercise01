@@ -2,7 +2,8 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Module05Exercise01.Resources.Styles.WebResources">
-    
-    <x:String x:Key="PrimaryFontFamily">NunitoRegular</x:String>
+
+    <x:String x:Key="PrimaryFontFamily">ManropeRegular</x:String>
+    <x:String x:Key="PrimaryFontFamilyBold">ManropeSemibold</x:String>
 
 </ResourceDictionary>
