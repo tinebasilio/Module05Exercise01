@@ -7,8 +7,6 @@ namespace Module05Exercise01
     public partial class MainPage : ContentPage
     {
         private readonly DatabaseConnectionService _dbConnectionService;
-
-        int count = 0;
         public MainPage()
         {
             InitializeComponent();
@@ -18,7 +16,7 @@ namespace Module05Exercise01
 
         }
 
-        private async void OnTestConnectionClicked(object sender, EventArgs e)
+        /**private async void OnTestConnectionClicked(object sender, EventArgs e)
         {
             var connectionString = _dbConnectionService.GetConnectionString();
             try
@@ -35,11 +33,11 @@ namespace Module05Exercise01
                 ConnectionStatusLabel.Text = $"Connection Failed!";
                 ConnectionStatusLabel.TextColor = Colors.Red;
             }
-        }
+        }**/
 
         private async void OpenViewPersonal(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ViewPersonal());
+            await Navigation.PushAsync(new ViewEmployee());
         }
 
     }
