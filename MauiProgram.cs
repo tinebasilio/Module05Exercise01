@@ -11,7 +11,8 @@ namespace Module05Exercise01
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
-                    fonts.AddFont("Nunito-Regular.ttf", "NunitoRegular");
+                    fonts.AddFont("Manrope-Regular.ttf", "ManropeRegular");
+                    fonts.AddFont("Manrope-SemiBold.ttf", "ManropeSemibold");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
