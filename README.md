@@ -9,6 +9,6 @@
 
 ### tblEmployee
 <div style="justify-content: center;">
-    <img src="Screenshots/tblEmployee.png" width="500"/>
+    <img src="Screenshots/tblEmployee.png" width="650"/>
 </div>
 
